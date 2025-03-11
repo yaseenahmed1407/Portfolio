@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rithika Sanath - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d3436;
+            --secondary-color: #6c5ce7;
+            --accent-color: #a8a4e6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            color: var(--primary-color);
+        }
+
+        /* Navigation */
+        .nav-container {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 20px 60px;
+            background: linear-gradient(135deg, #a8a4e6 0%, #6c5ce7 100%);
+            color: white;
+            text-align: center;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s all ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 40px;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+         /* Add these new styles */
+         .skill-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .skill-tags span {
+            background: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .awards-list li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .awards-list li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+        }
+
+        .language-list {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .language-list span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+            background: rgba(108, 92, 231, 0.1);
+        }
+
+        .nav-links a.active {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .logo {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="container navbar">
+            <div class="logo">Rithika Sanath</div>
+            <ul class="nav-links">
+                <li><a href="#summary">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Rithika Sanath 🌟</h1>
+            <p>Supply Chain & Product Management</p>
+            <div class="contact-info">
+                <p>📧 rithika0814@gmail.com | 📱 9121721489 | 📍 Hyderabad, India</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Summary Section -->
+        <section id="summary" class="visible">
+            <div class="card">
+                <h2>📝 Summary</h2>
+                <p>Highly motivated MBA graduate with hands-on experience in operations, product coordination, and supply chain management...</p>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section id="experience">
+            <h2>💼 Work Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Project Management Coordinator @ Inspirl</h3>
+                    <p>Jun 2023 – Mar 2024</p>
+                    <ul>
+                        <li>Streamlined reporting processes, enhancing data visibility and decision-making</li>
+                        <li>Managed project timelines, reducing delivery times by 30%</li>
+                        <li>Collaborated with cross-functional teams, enhancing project success rates by 10%</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Operations Intern @ Upshift (UNICEF Project)</h3>
+                    <p>Nov 2022 – Apr 2023</p>
+                    <ul>
+                        <li>Coordinated logistics for learning initiatives with District Science Officers</li>
+                        <li>Managed program logistics and data entry with 100% accuracy</li>
+                        <li>Conducted quality audits reducing discrepancies by 25%</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Program Coordinator - Public Engagement</h3>
+                    <p>Feb 2022 – Jul 2022</p>
+                    <ul>
+                        <li>Managed public engagement initiatives with 95% compliance rate</li>
+                        <li>Built stakeholder relationships improving service delivery efficiency</li>
+                        <li>Implemented operational improvements reducing processing time by 20%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Education -->
+        <section id="education">
+            <h2>🎓 Education</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Master of Business Administration (MBA)</h3>
+                    <p>Amity University, Noida (Pursuing)</p>
+                    <p>Specialization: Supply Chain & Product Management</p>
+                </div>
+
+                <div class="card">
+                    <h3>Bachelor of Arts in Humanities</h3>
+                    <p>Maris Stella College, Vijayawada (2020-2023)</p>
+                    <p>Coursework: History, Economics, Political Science</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills & Certifications -->
+      <!-- Skills Section -->
+      <section id="skills">
+        <h2>🛠️ Technical Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💻 Technical Proficiency</h3>
+                <div class="skill-tags">
+                    <span>Microsoft Excel</span>
+                    <span>Power BI</span>
+                    <span>LMS</span>
+                    <span>Data Analysis</span>
+                    <span>Process Optimization</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Languages</h3>
+                <div class="language-list">
+                    <span>🇬🇧 English</span>
+                    <span>🇮🇳 Telugu</span>
+                    <span>🇪🇸 Spanish</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2>🏅 Awards & Certifications</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>📜 Certifications</h3>
+                <ul class="awards-list">
+                    <li>Microsoft Excel for Business and Data Analysis</li>
+                    <li>Supply Chain Management Expo</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🏆 Awards</h3>
+                <ul class="awards-list">
+                    <li>Certificate of Appreciation - UNICEF Capacity Building Workshop</li>
+                    <li>Client-Centric Innovator Award - Inspirl</li>
+                    <li>English Language Fellowship - US Consulate, Hyderabad</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <script>
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
